@@ -76,11 +76,6 @@ if [[ ${#files[@]} -eq 0 ]]; then
 fi
 # 6. вывод общего количества найденных файлов в исходной диреткории
 
-file_count=$(find "$source_dir" -type f | wc -l)
-
-
-echo "Number of files in $source_dir: $file_count"
-
 # 7. Копирование файлов с указанным расширением в целевую директорию
 
 
