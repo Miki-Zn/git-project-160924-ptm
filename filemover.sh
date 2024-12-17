@@ -9,6 +9,31 @@
 
 # 4. Проверка существования целевой директории
 
+read -p "enter target directory: " target_dir
+
+if [[ -d "$target_dir" ]]
+then
+    echo "Directory exist"
+else
+   echo "Directory does not exist"
+   exit 1
+fi
+
+
+if [[ ! -r "$target_dir" ]]
+then
+    echo "Directory $target_dir does not have rights for reading"
+else
+    echo "Directory has rights for reading"
+fi
+
+if [[ ! -w "$target_dir" ]]
+then
+    echo "Directory $target_dir does not have rights for writing"
+else
+    echo "Directory has rights for writing"
+fi
+
 # 5.Проверить наличие файлов с указанным расширением в исходной директории
 
 # 6. вывод общего количества найденных файлов в исходной диреткории
