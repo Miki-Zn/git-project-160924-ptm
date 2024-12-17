@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source_dir=/example/opt/dir
+source_dir=/example/opt/directory
 
 
 file_count=$(find "$source_dir" -type f | wc -l)
