@@ -9,9 +9,7 @@
 
 # 4. Проверка существования целевой директории
 
-read -p "enter target directory: " target_dir
-
-if [[ -d "$target_dir" ]]
+if [[ -d "$targetdir" ]]
 then
     echo "Directory exist"
 else
@@ -20,16 +18,16 @@ else
 fi
 
 
-if [[ ! -r "$target_dir" ]]
+if [[ ! -r "$targetdir" ]]
 then
-    echo "Directory $target_dir does not have rights for reading"
+    echo "Directory $targetdir does not have rights for reading"
 else
     echo "Directory has rights for reading"
 fi
 
-if [[ ! -w "$target_dir" ]]
+if [[ ! -w "$targetdir" ]]
 then
-    echo "Directory $target_dir does not have rights for writing"
+    echo "Directory $targetdir does not have rights for writing"
 else
     echo "Directory has rights for writing"
 fi
